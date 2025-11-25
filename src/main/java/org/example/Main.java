@@ -17,8 +17,5 @@ public class Main {
         // Сравниваем
         System.out.println("A и C одинаковые? " + (a.equals(c)));
         System.out.println("B и C одинаковые? " + (b.equals(c)));
-
-        //System.out.println("Линия от {X1;Y1}\n" +
-        //        "до {X2;Y2}”");
     }
 }
