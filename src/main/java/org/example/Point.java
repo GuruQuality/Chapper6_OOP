@@ -12,4 +12,7 @@ public class Point {
     public String getText(){
         return "{" + x + ";" + y +"}";
     }
+    public boolean equals(Point obj) {
+        return (this.x == obj.x) && (this.y == obj.y);
+    }
 }
