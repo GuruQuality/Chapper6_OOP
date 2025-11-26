@@ -15,4 +15,7 @@ public class Point {
     public boolean equals(Point obj) {
         return (this.x == obj.x) && (this.y == obj.y);
     }
+    public String toString(){
+        return getText();
+    }
 }
