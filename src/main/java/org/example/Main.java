@@ -1,21 +1,15 @@
 package org.example;
 
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        // Создаем точки
-        Point a = new Point(1,3);
-        Point b = new Point(1,3);
-        Point c = new Point(5,8);
+        Fraction f1 = new Fraction(1, 3);
+        Fraction f2 = new Fraction(2, 5);
+        Fraction f3 = new Fraction(7, 8);
+        Fraction result = f1.sum(f2).sum(f3).minus(5);
 
-        // Выводим их
-        //System.out.println(Point.point(2,2));
-        System.out.println("Точка A: " + a.getText());
-        System.out.println("Точка B: " + b.getText());
-        System.out.println("Точка C: " + c.getText());
-        System.out.println();// Пустая строка для разделения
+        System.out.println("Fraction = " + result);
 
-        // Сравниваем
-        System.out.println("A и B одинаковые? " + (a==b));
-        System.out.println("A и C одинаковые? " + (a==c));
     }
 }
