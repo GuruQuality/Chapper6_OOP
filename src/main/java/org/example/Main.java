@@ -20,12 +20,15 @@ public class Main {
         System.out.println();// Пустая строка для разделения
 
         //Вызов массива линий.Создать Ломаную, проходящую через точки {1;5}, {2;8}, {5;3}, {8,9}
-        PolyLineV2 polyLine = new PolyLineV2(a, b, c, d);
+        PolyLine polyLine = new PolyLine(a, b, c, d);
+        ClosedPolyLine closedPolyLine = new ClosedPolyLine(a, b, c, d);
         System.out.println("Ломаная " + polyLine);
+        System.out.println("Замкнутая Ломаная " + closedPolyLine);
         System.out.println();// Пустая строка для разделения
 
         //2 Рассчитать длину Ломаной
         polyLine.printInfoLenght();
+        closedPolyLine.printInfoLenght();
         System.out.println();// Пустая строка для разделения
 
         //3 Получить у Ломаной массив Линий
