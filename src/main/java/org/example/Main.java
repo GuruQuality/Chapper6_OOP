@@ -1,7 +1,9 @@
 package org.example;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,31 +28,40 @@ public class Main {
         System.out.println("Замкнутая Ломаная " + closedPolyLine);
         System.out.println();// Пустая строка для разделения
 
-        //2 Рассчитать длину Ломаной
-        polyLine.printInfoLenght();
-        closedPolyLine.printInfoLenght();
-        System.out.println();// Пустая строка для разделения
+//        //2 Рассчитать длину Ломаной
+//        polyLine.printInfoLenght();
+//        closedPolyLine.printInfoLenght();
+//        System.out.println();// Пустая строка для разделения
+//
+//        //3 Получить у Ломаной массив Линий
+//        Line[] arrayLines = polyLine.getArrayLines();
+//
+//        //4 Рассчитать длину массива Линий
+//        double sumLine2 = 0;
+//        for (int i = 0; i < arrayLines.length; i++) {
+//            sumLine2 += arrayLines[i].getLength();
+//        }
+//        System.out.println("Длина массива линий: " + sumLine2);
+//        System.out.println();// Пустая строка для разделения
+//
+//        //6 Измение координаты Точки b {2,8}
+//        b.x = 12;
+//        b.y = 8;
+//        // Проверка изменений в Ломаной, в двух Линиях массива и в точке
+//        System.out.println("Измененная Ломаная " + polyLine);
+//        System.out.println("Точка б " + b);
+//        System.out.println("Линия 1 " + line1 + " Линия 3 " + line3);
 
-        //3 Получить у Ломаной массив Линий
-        Line[] arrayLines = polyLine.getArrayLines();
+        List<Measurable> listMeasurable = new ArrayList<>();
+        listMeasurable.add(polyLine);
+        listMeasurable.add(closedPolyLine);
 
-        //4 Рассчитать длину массива Линий
-        double sumLine2 = 0;
-        for (int i = 0; i < arrayLines.length; i++) {
-            sumLine2 += arrayLines[i].getLength();
+        printPolyLinesLength(listMeasurable);
+    }
+
+    public static void printPolyLinesLength(List<Measurable> polyLines) {
+        for (Measurable polyLine : polyLines) {
+            System.out.println(polyLine.getLength());
         }
-        System.out.println("Длина массива линий: " + sumLine2);
-        System.out.println();// Пустая строка для разделения
-
-        //6 Измение координаты Точки b {2,8}
-        b.x = 12;
-        b.y = 8;
-        // Проверка изменений в Ломаной, в двух Линиях массива и в точке
-        System.out.println("Измененная Ломаная " + polyLine);
-        System.out.println("Точка б " + b);
-        System.out.println("Линия 1 " + line1 + " Линия 3 " + line3);
-
-        //Если изменения отразились в данной точке, в Ломаной и в двух Линиях массива (из пункта 3)
-
     }
 }

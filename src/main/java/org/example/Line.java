@@ -1,6 +1,6 @@
 package org.example;
 
-public class Line extends Object {
+public class Line extends Object implements Measurable {
     Point a;
     Point b;
     // Конструктор - создает линию с заданными точками

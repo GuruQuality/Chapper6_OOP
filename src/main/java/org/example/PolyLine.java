@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Arrays;
 
-public class PolyLine {
+public class PolyLine implements Measurable{
     Point[] arrayPoints;
 
     public PolyLine(Point... points) {
@@ -49,3 +49,4 @@ public class PolyLine {
     }
 
 }
+
