@@ -10,6 +10,15 @@ public class Main {
         Fraction result = f1.sum(f2).sum(f3).minus(5);
 
         System.out.println("Fraction = " + result);
+        System.out.println("intValue: " + f1.intValue());
+        System.out.println("longValue: " + f1.longValue());
+        System.out.println("floatValue: " + f1.floatValue());
+        System.out.println("doubleValue: " + f1.doubleValue());
 
+        // Демонстрация, что Fraction действительно подтип Number
+        System.out.println("\nИспользование как Number:");
+        Number num = result;
+        System.out.println("Number.intValue(): " + num.intValue());
+        System.out.println("Number.doubleValue(): " + num.doubleValue());
     }
 }

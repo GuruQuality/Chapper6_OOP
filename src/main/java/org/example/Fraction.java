@@ -1,6 +1,6 @@
 package org.example;
 
-public class Fraction {
+public class Fraction extends Number{
     private int numerator = 0;//числитель
     private int denominator = 0;//denominator
 
@@ -66,6 +66,25 @@ public class Fraction {
         int newNumerotor = (fraction1.numerator * fraction2.denominator) - (fraction2.numerator * fraction1.denominator);
         return new Fraction(newNumerotor, comonDemoniator);
     }
+    @Override
+    public int intValue() {
+        return numerator / denominator;
+    }
+
+    @Override
+    public long longValue() {
+        return numerator / denominator;
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) numerator / denominator;
+    }
+
+    @Override
+    public double doubleValue() {
+        return (double) numerator / denominator;
+    }
 
     // Метод печати результата
     @Override
@@ -73,13 +92,3 @@ public class Fraction {
         return numerator + "/" + denominator;
     }
 }
-//Создайте класс Дробь (Fraction) со следующими особенностями:
-
-//Объекты дробей не могут изменять свое состояние
-
-//Может вернуть строковое представление вида “числитель/знаменатель” (toString)
-//Может выполнять операции сложения, вычитания с другой Дробью или целым числом. Результатом операции должна быть новая Дробь
-//Затем необходимо выполнить следующие задачи:
-//
-//Создать несколько экземпляров дробей
-//Посчитать f1.sum(f2).sum(f3).minus(5), где f1 это одна треть, f2 две пятых, а f3 это семь восьмых
