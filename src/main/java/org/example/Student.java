@@ -8,16 +8,19 @@ import java.util.Map;
 public class Student {
     private String name = "";
     private ArrayList<Integer> grades = new ArrayList<>();//обявили свойство (ссылку на объект)
+    private Rule rule;
 
     // Конструктор - создает точку с заданными координатами
-    Student(String name) {
-        //this(name, new int[0]);
-        this.name = name;
+    Student(String name, Rule rule) {
+        this(name, new int[0], rule);
+//        this.name = name;
+//        this.rule = rule;
     }
 
     // Конструктор - создает точку с заданными координатами
-    Student(String name, int[] grades) {
+    Student(String name, int[] grades, Rule rule) {
         this.name = name;
+        this.rule = rule;
         for (int grade : grades) {
             this.addGrade(grade);
         }
@@ -30,18 +33,8 @@ public class Student {
     }
 
     public void addGrade(int grade) {
-        if (grade >= 2 && grade <= 5) {
+        if (rule.validate(grade)) {//вызов метода валидации у конкретного Правила через Свойчтво rule
             this.grades.add(grade);
         }
     }
 }
-//Создайте класс Студент (Student), которая описывается:
-//Имя (name): строка
-//Оценки (grades): массив целых чисел
-//При создании обязательно указать имя, и опционально набор оценок
-//Может возвращать текстовое представление вида “Имя: [оценка1, оценка2,…,оценкаN]” (toString)
-//Оценки можно добавлять в любой момент, но нельзя удалять
-//Все оценки должны быть в диапазоне от 2 до 5
-//Весь набор оценок можно получить в любой момент
-//Задача
-//считается решенной корректно, если выполняются требования инкапсуляции.
