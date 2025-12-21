@@ -1,9 +1,8 @@
 package org.example;
 
-import java.lang.reflect.Array;
+import org.example.rules.Rule;
+
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class Student {
     private String name = "";

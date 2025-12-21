@@ -1,4 +1,6 @@
-package org.example;
+package org.example.rules;
+
+import org.example.rules.Rule;
 
 public class PartyCheckRule implements Rule {
 

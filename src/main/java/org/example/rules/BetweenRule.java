@@ -1,4 +1,6 @@
-package org.example;
+package org.example.rules;
+
+import org.example.rules.Rule;
 
 public class BetweenRule implements Rule {//т.к. класс выполняет требование - implements Rule
 //    то все объекты реализут метод boolean validate и будут проверяться на значения Boolean
