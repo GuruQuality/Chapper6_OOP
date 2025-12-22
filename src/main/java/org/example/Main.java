@@ -2,20 +2,19 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        // Создаем точки
-        Point a = new Point(1,3);
-        Point b = new Point(1,3);
-        Point c = new Point(5,8);
-
+        // Создаем Соусы
+        //Sauce s1 = new Sauce("Ketchup", "острый");
+        //Sauce s2 = new Sauce("Masik", "не острый");
+        // Создаем Соусы  с использованием enum
+        Sauce s1 = new Sauce("Ketchup", SpiceLevel.SPICY);
+        Sauce s2 = new Sauce("Mayonnaise", SpiceLevel.NOT_SPICY);
+        Sauce s3 = new Sauce("Mustard", SpiceLevel.VERY_Spicy);
+        //s2.spiceLevel.getRussianName(jjjj);????
         // Выводим их
         //System.out.println(Point.point(2,2));
-        System.out.println("Точка A: " + a.getText());
-        System.out.println("Точка B: " + b.getText());
-        System.out.println("Точка C: " + c.getText());
-        System.out.println();// Пустая строка для разделения
+        System.out.println("Sauce: " + s1.getText());
+        System.out.println("Sauce: " + s2.getText());
+        System.out.println("Sauce: " + s3.getText());
 
-        // Сравниваем
-        System.out.println("A и C одинаковые? " + (a.equals(c)));
-        System.out.println("B и C одинаковые? " + (b.equals(c)));
     }
 }
