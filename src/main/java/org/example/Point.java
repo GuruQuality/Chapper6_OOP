@@ -13,7 +13,7 @@ public class Point implements Cloneable {
     // метод клонирования Object
     @Override
     public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return new Point(this.x, this.y);
     }
 
     // Метод который возвращает точку в виде текста {X;Y}
