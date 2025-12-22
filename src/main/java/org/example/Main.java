@@ -2,19 +2,23 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        // Создаем Соусы
-        //Sauce s1 = new Sauce("Ketchup", "острый");
-        //Sauce s2 = new Sauce("Masik", "не острый");
-        // Создаем Соусы  с использованием enum
-        Sauce s1 = new Sauce("Ketchup", SpiceLevel.SPICY);
-        Sauce s2 = new Sauce("Mayonnaise", SpiceLevel.NOT_SPICY);
-        Sauce s3 = new Sauce("Mustard", SpiceLevel.VERY_Spicy);
-        //s2.spiceLevel.getRussianName(jjjj);????
-        // Выводим их
-        //System.out.println(Point.point(2,2));
-        System.out.println("Sauce: " + s1.getText());
-        System.out.println("Sauce: " + s2.getText());
-        System.out.println("Sauce: " + s3.getText());
+        System.out.println(op(1, 2, 1));
+    }
 
+    static int op(int x, int y, int op) {
+        switch (op) {
+            case 1:
+                return x + y;
+            case 2:
+                return x - y;
+            case 3:
+                return x * y;
+            case 4:
+                return x / y;
+        }
+        return 0;
     }
 }
+//Замените
+//метод op на enum, выполняющий ту же
+//самую задачу что и весь метод op.
