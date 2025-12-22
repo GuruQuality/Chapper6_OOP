@@ -29,6 +29,9 @@ public class Point implements Cloneable {
         // 2. Сравнение полей
         return x == point.x && y == point.y;
     }
+    public String toString(){
+        return getText();
+    }
 }
 //Переопределите
 //метод сравнения объектов по состоянию таким образом, чтобы две точки считались

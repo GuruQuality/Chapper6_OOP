@@ -35,15 +35,26 @@ public class Main {
 
         //line1.start.x = 10;
 
-        // Выводим их Линии
-        //System.out.println(Point.point(2,2));
-        System.out.println("Линия line1: " + line1.toString());
-        System.out.println("Линия line2: " + line2.toString());
-        System.out.println("Линия line3: " + line3.toString());
+//        // Выводим их Линии
+//        //System.out.println(Point.point(2,2));
+//        System.out.println("Линия line1: " + line1.toString());
+//        System.out.println("Линия line2: " + line2.toString());
+//        System.out.println("Линия line3: " + line3.toString());
+//        System.out.println();// Пустая строка для разделения
+//
+//        // Сравниваем Линии
+//        System.out.println("line1 и line2 одинаковые? " + (line1.equals(line2)));
+//        System.out.println("line1 и line3 одинаковые? " + (line1.equals(line3)));
+
+        PolyLine polyLine1 = new PolyLine(new Point(1, 2), new Point(3, 4));
+        PolyLine polyLine2 = new PolyLine(new Point(1, 2), new Point(3, 3));
+        System.out.println();// Пустая строка для разделения
+        // Выводим их Ломанную Линию
+        System.out.println("polyLine1: " + polyLine1.toString());
+        System.out.println("polyLine2: " + polyLine2.toString());
         System.out.println();// Пустая строка для разделения
 
-        // Сравниваем Линии
-        System.out.println("line1 и line2 одинаковые? " + (line1.equals(line2)));
-        System.out.println("line1 и line3 одинаковые? " + (line1.equals(line3)));
+        // Сравниваем Две Ломанные Линии
+        System.out.println("polyLine1 и polyLine2 одинаковые? " + (polyLine1.equals(polyLine2)));
     }
 }
