@@ -31,9 +31,12 @@ public class PolyLine {
         if (this.points.length != ((PolyLine) obj).points.length) {
             return false;
         }
-        for (int i = 0; i < points.length - 1; i++) {
-           return this.points[i].equals(((PolyLine) obj).points[i]);
+        for (int i = 0; i <= points.length - 1; i++) {
+            Boolean proshlo = this.points[i].equals(((PolyLine) obj).points[i]);
+            if (proshlo == false) {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 }
