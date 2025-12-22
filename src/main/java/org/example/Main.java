@@ -4,8 +4,6 @@ public class Main {
     public static void main(String[] args) {
         // Создаем точки
         Point a = new Point(1,3);
-        Point b = new Point(1,3);
-        Point c = new Point(5,8);
 
         // Выводим их
         //System.out.println(Point.point(2,2));
