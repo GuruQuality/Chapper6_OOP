@@ -2,23 +2,24 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(op(1, 2, 1));
+        System.out.println(op(1, 2, OP.MINUS));
     }
 
-    static int op(int x, int y, int op) {
+    static int op(int x, int y, OP op) {
         switch (op) {
-            case 1:
+            case OP.SUM:
                 return x + y;
-            case 2:
+            case OP.MINUS:
                 return x - y;
-            case 3:
+            case OP.MULTY:
                 return x * y;
-            case 4:
+            case OP.DIV:
                 return x / y;
         }
         return 0;
     }
 }
+
 //Замените
-//метод op на enum, выполняющий ту же
+//В методе метод op параметр OP на enum, выполняющий ту же
 //самую задачу что и весь метод op.
