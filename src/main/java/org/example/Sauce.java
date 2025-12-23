@@ -15,24 +15,6 @@ public class Sauce {
         return name + " " + spiceLevel.getRussianName();
     }
 }
-//Содержит три предопределенных значения
-//Запрещено создание соуса с некорректной остротой
-//VERY_Spicy2
-enum SpiceLevel{
-    VERY_Spicy("очень острый"),
-    SPICY("острый"),
-    NOT_SPICY("не острый");
-
-    private final String spiceLevel;
-
-    SpiceLevel(String spiceLevel) {
-        this.spiceLevel = spiceLevel;
-    }
-    //возвращает читаемое описание на русском
-    public String getRussianName() {
-        return spiceLevel;
-    }
-}
 //Создайте
 //класс Соус, который описывается:
 //
