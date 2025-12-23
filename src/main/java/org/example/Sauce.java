@@ -2,7 +2,7 @@ package org.example;
 
 public class Sauce {
     String name;
-    private SpiceLevel spiceLevel;
+    SpiceLevel spiceLevel;
 
     // Конструктор - создает точку с заданными координатами
     Sauce(String name, SpiceLevel spiceLevel) {
