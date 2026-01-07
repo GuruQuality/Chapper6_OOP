@@ -10,6 +10,7 @@ public class Sum {
                 //Переводим строчку из строки в число
                 value = Double.parseDouble(s);
             } catch (NumberFormatException ex) {
+                System.out.println("error");
             }
             sumDouble += value;
             //System.out.println(value);
