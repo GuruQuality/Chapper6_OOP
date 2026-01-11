@@ -1,24 +1,22 @@
 package org.example;
 
-import java.util.Optional;
+import org.example.characteristics.Base;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Point {
-    protected int x;
-    Optional<Integer> y = null;
-    //int y;
+    List<Base> characteristics = new ArrayList<>();
 
-    public Point(int x) {
-        this.x = x;
-    }
-
-    // Конструктор - создает точку с заданными координатами
-    public Point(int x, Optional<Integer> y) {
-        this.x = x;
-        this.y = y;
+    public void addCharacteristic(Base characteristic) {
+        characteristics.add(characteristic);
     }
 
     // Метод который возвращает точку в виде текста {X;Y}
-    public String getText() {
-        return "{" + x + ";" + y + "}";
+    public String toString() {
+        String result = characteristics.stream().map(Objects::toString).collect(Collectors.joining(";"));
+        return "[" + result + "]";
     }
 }
