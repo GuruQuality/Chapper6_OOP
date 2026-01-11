@@ -1,8 +1,8 @@
 package employe;
 
 public class Employee {
-    protected String name;
-    protected Department department;
+    String name;
+    Department department;
 
     public Employee(String name, Department department) {
         this.name = name;
