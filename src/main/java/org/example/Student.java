@@ -4,7 +4,7 @@ import org.example.rules.Rule;
 
 import java.util.ArrayList;
 
-public class Student {
+public final class Student {
     private String name = "";
     private ArrayList<Integer> grades = new ArrayList<>();//обявили свойство (ссылку на объект)
     private Rule rule;
