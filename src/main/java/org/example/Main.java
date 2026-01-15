@@ -1,21 +1,21 @@
 package org.example;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
 public class Main {
     public static void main(String[] args) {
-        // Создаем точки
-        Point a = new Point(1,3);
-        Point b = new Point(1,3);
-        Point c = new Point(5,8);
-
-        // Выводим их
-        //System.out.println(Point.point(2,2));
-        System.out.println("Точка A: " + a.getText());
-        System.out.println("Точка B: " + b.getText());
-        System.out.println("Точка C: " + c.getText());
-        System.out.println();// Пустая строка для разделения
-
-        // Сравниваем
-        System.out.println("A и C одинаковые? " + (a.equals(c)));
-        System.out.println("B и C одинаковые? " + (b.equals(c)));
+        Cat cat = new Cat("Vasya", 10, new ArrayList<>(Arrays.asList("Anton", "Oleg", "Igor")));
+        Dog dog = new Dog("Lolik", 2.0, new ArrayList<>(Arrays.asList("Caesar", "Barsik", "Betty")));
+        // Обнулить все поля кроме примитивов
+        System.out.println("До обнуления полей" + cat);
+        ObjectNullifier.nullifyObject(cat);
+        System.out.println("После обнуления полей" + cat);
+        System.out.println();
+        System.out.println("До обнуления полей" + dog);
+        ObjectNullifier.nullifyObject(dog);
+        System.out.println("После обнуления полей" + dog);
     }
 }
