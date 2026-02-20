@@ -1,9 +1,6 @@
 package org.example;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class Student {
     private String name = "";
@@ -23,7 +20,7 @@ public class Student {
         }
     }
 
-    //Метод вывода оценкок
+    //Метод вывода студентов с оценками
     @Override
     public String toString() {
         return name + ": " + grades;
@@ -32,16 +29,12 @@ public class Student {
     public void addGrade(int grade) {
         if (grade >= 2 && grade <= 5) {
             this.grades.add(grade);
+        } else {
+            System.out.println("Оценка " + grade + " не добавлена. Допустимы оценки от 2 до 5.");
         }
     }
+
+    public ArrayList<Integer> getGrades() {
+        return new ArrayList<>(grades);//возрат копии
+    }
 }
-//Создайте класс Студент (Student), которая описывается:
-//Имя (name): строка
-//Оценки (grades): массив целых чисел
-//При создании обязательно указать имя, и опционально набор оценок
-//Может возвращать текстовое представление вида “Имя: [оценка1, оценка2,…,оценкаN]” (toString)
-//Оценки можно добавлять в любой момент, но нельзя удалять
-//Все оценки должны быть в диапазоне от 2 до 5
-//Весь набор оценок можно получить в любой момент
-//Задача
-//считается решенной корректно, если выполняются требования инкапсуляции.
