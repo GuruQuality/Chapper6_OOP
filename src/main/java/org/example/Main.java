@@ -57,6 +57,15 @@ public class Main {
         listMeasurable.add(closedPolyLine);
 
         printPolyLinesLength(listMeasurable);
+
+        // Создаем строку через адаптер
+        Measurable[] objects = {line2, new StringMeasurable("Holla!")};
+        for(
+                Measurable obj:objects)
+
+        {
+            System.out.println(obj.toString() + " длина: " + obj.getLength());
+        }
     }
 
     public static void printPolyLinesLength(List<Measurable> polyLines) {

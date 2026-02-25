@@ -47,6 +47,5 @@ public class PolyLine implements Measurable{
     public void printInfoLenght() {
         System.out.println("Общая длина Ломаной: " + getLength());
     }
-
 }
 
